@@ -1,17 +1,29 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import Home from './src/screens/Home'; 
+import Feed from './src/screens/Feed';
+import Profile from './src/screens/Profile'; 
+import Analytics from './src/screens/Analytics'; 
+import Friends from './src/screens/Friends'; 
+import CustomDrawer from './src/screens/CustomDrawer';
 
 const Drawer = createDrawerNavigator();
 
-function MyDrawer() {
+const MyDrawer = () => {
   return (
-    <Drawer.Navigator useLegacyImplementation>
-      <Drawer.Screen name="Home" component={Home} />
- 
+    <Drawer.Navigator
+      drawerContent={ props => <CustomDrawer {...props}/> }
+      screenOptions={{
+        headerShown:false,
+      }}
+    >
+      <Drawer.Screen name="Home"    component={Home} />
+      <Drawer.Screen name="Profile" component={Profile} />
+      <Drawer.Screen name="Feed"    component={Feed} />
+      <Drawer.Screen name="Analytics"   component={Analytics} />
+      <Drawer.Screen name="Invite Friends to Motiv8"  component={Friends} />
     </Drawer.Navigator>
   );
 }
