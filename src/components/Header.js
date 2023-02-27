@@ -4,15 +4,19 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { useNavigation } from '@react-navigation/native';
 
 const Header = () => {
+    
     const navigation = useNavigation();
     
     return (
-        <TouchableOpacity 
-            onPress={() => navigation.openDrawer()}
-            style={styles.container}
-        >
-            <Ionicons name="menu-outline" size={28}  />
-        </TouchableOpacity>
+        <View>
+            <TouchableOpacity 
+                onPress={() => navigation.openDrawer()}
+                style={styles.container}
+            >
+                <Ionicons name="menu-outline" size={28}  />
+            </TouchableOpacity>
+            <View style={styles.line} />
+        </View>
   )
 }
 
@@ -22,6 +26,9 @@ const styles = StyleSheet.create({
     container: {
         marginLeft: 20,
         marginTop: 40,
-        marginBottom: 20
+    },
+    line: {
+        borderWidth: StyleSheet.hairlineWidth,
+        marginTop: 20
     }
 })
