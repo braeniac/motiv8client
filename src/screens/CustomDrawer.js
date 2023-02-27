@@ -20,6 +20,7 @@ const CustomDrawer = ({ navigation }) => {
                     
                 </View>
             </TouchableOpacity>
+            
             <TouchableOpacity
                 onPress={() => navigation.navigate('Feed')}
             >
@@ -43,6 +44,7 @@ const CustomDrawer = ({ navigation }) => {
                     
                 </View>
             </TouchableOpacity>
+
             <TouchableOpacity
                 onPress={() => navigation.navigate('Analytics')}
             >
@@ -54,6 +56,19 @@ const CustomDrawer = ({ navigation }) => {
                     
                 </View>
             </TouchableOpacity>
+
+            <TouchableOpacity
+                onPress={() => navigation.navigate('Exercise')}
+            >
+                <View style={styles.menu}>
+                    <Ionicons name="barbell-outline" size={24} color="#D0312D" />
+                    <View style={styles.menuItem}>
+                        <Text style={styles.menuItemText}>Exercise</Text>
+                    </View>
+                    
+                </View>
+            </TouchableOpacity>
+
             <TouchableOpacity
                 onPress={() => navigation.navigate('Invite Friends to Motiv8')}
             >
@@ -75,8 +90,7 @@ const CustomDrawer = ({ navigation }) => {
                     <Ionicons name="exit-outline" size={24} color="#D0312D" />
                     <View style={styles.menuItem}>
                         <Text style={styles.menuItemText}>Sign out</Text>
-                    </View>
-                    
+                    </View>  
                 </View>
             </TouchableOpacity>
         </View>
@@ -112,6 +126,4 @@ const styles = StyleSheet.create({
         position: 'absolute', 
         marginBottom: 50
     }
-    
-
 })

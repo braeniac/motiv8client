@@ -8,6 +8,7 @@ import Profile from './src/screens/Profile';
 import Analytics from './src/screens/Analytics'; 
 import Friends from './src/screens/Friends'; 
 import CustomDrawer from './src/screens/CustomDrawer';
+import Exercise from './src/screens/Exercise';
 
 const Drawer = createDrawerNavigator();
 
@@ -19,11 +20,12 @@ const MyDrawer = () => {
         headerShown:false,
       }}
     >
-      <Drawer.Screen name="Home"    component={Home} />
-      <Drawer.Screen name="Profile" component={Profile} />
-      <Drawer.Screen name="Feed"    component={Feed} />
-      <Drawer.Screen name="Analytics"   component={Analytics} />
-      <Drawer.Screen name="Invite Friends to Motiv8"  component={Friends} />
+      <Drawer.Screen name="Home"                      component={Home}      />
+      <Drawer.Screen name="Profile"                   component={Profile}   />
+      <Drawer.Screen name="Feed"                      component={Feed}      />
+      <Drawer.Screen name="Analytics"                 component={Analytics} />
+      <Drawer.Screen name="Exercise"                  component={Exercise}  />
+      <Drawer.Screen name="Invite Friends to Motiv8"  component={Friends}   />
     </Drawer.Navigator>
   );
 }
