@@ -17,7 +17,8 @@ const MyDrawer = () => {
     <Drawer.Navigator
       drawerContent={ props => <CustomDrawer {...props}/> }
       screenOptions={{
-        headerShown:false,
+        headerShown: false
+        
       }}
     >
       <Drawer.Screen name="Home"                      component={Home}      />

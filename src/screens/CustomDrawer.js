@@ -1,8 +1,6 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react'
 import Ionicons from '@expo/vector-icons/Ionicons';
-import MaterialIcons from '@expo/vector-icons/MaterialIcons'; 
-import EvilIcons from '@expo/vector-icons/EvilIcons';
 
 const CustomDrawer = ({ navigation }) => {
   return (
@@ -112,9 +110,6 @@ const styles = StyleSheet.create({
         marginTop: 20,
         flexDirection: 'row',
         marginLeft: 20
-    },
-    menuItem: {
-  
     },
     menuItemText: {
         fontSize: 15,

@@ -3,7 +3,7 @@ import React from 'react'
 
 const Register = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Register</Text>
     </View>
   )
@@ -11,4 +11,9 @@ const Register = () => {
 
 export default Register
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: 'white',
+    flex: 1, 
+  }
+})
