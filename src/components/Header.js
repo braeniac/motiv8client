@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     },
     line: {
         borderWidth: StyleSheet.hairlineWidth,
-        marginTop: 20
+        marginTop: 20,
+        borderColor: '#eeeee4',
     }
 })

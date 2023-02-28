@@ -1,11 +1,17 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Footer = () => {
+
+
+  const [modal, setModal] = useState(false); 
+
   return (
     <View style={styles.container}>
       <View style={styles.line} />
-      <TouchableOpacity>
+      <TouchableOpacity
+        
+      >
           <Text style={styles.text}>Start a Workout</Text>
       </TouchableOpacity>
     </View> 
@@ -26,6 +32,7 @@ const styles = StyleSheet.create({
     },
     line: {
       borderWidth: StyleSheet.hairlineWidth,
+      borderColor: '#eeeee4',
       bottom: 0, 
       position: 'absolute', 
       marginBottom: 40,
@@ -36,5 +43,6 @@ const styles = StyleSheet.create({
     },
     text: {
       color: "#D0312D",
+      fontWeight: '300'
     }
 })

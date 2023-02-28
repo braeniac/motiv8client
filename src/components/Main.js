@@ -1,10 +1,12 @@
 import { StyleSheet, Text, View, SafeAreaView, ScrollView } from 'react-native'
-import React from 'react'
+import react, { useState, useEffect } from 'react'
 
 const Main = () => {
-  return (
-    <SafeAreaView style={styles.container}>
-        <ScrollView style={styles.scrollView}>
+
+    
+    return (
+        <SafeAreaView style={styles.container}>
+            <ScrollView style={styles.scrollView}>
 
 
         
@@ -13,9 +15,9 @@ const Main = () => {
 
 
     
-        </ScrollView>
-    </SafeAreaView>
-  )
+            </ScrollView>
+        </SafeAreaView>
+    )
 }
 
 export default Main
@@ -28,4 +30,4 @@ const styles = StyleSheet.create({
     scrollView: {
       
     },
-  });
+});

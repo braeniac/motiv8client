@@ -18,18 +18,6 @@ const CustomDrawer = ({ navigation }) => {
                     
                 </View>
             </TouchableOpacity>
-            
-            <TouchableOpacity
-                onPress={() => navigation.navigate('Feed')}
-            >
-                <View style={styles.menu}>
-                    <Ionicons name="ios-share-social-outline" size={24} color="#D0312D" />
-                    <View style={styles.menuItem}>
-                        <Text style={styles.menuItemText}>Feed</Text>
-                    </View>
-                    
-                </View>
-            </TouchableOpacity>
 
             <TouchableOpacity
                 onPress={() => navigation.navigate('Profile')}
@@ -42,6 +30,18 @@ const CustomDrawer = ({ navigation }) => {
                     
                 </View>
             </TouchableOpacity>
+
+            {/* <TouchableOpacity
+                onPress={() => navigation.navigate('Feed')}
+            >
+                <View style={styles.menu}>
+                    <Ionicons name="ios-share-social-outline" size={24} color="#D0312D" />
+                    <View style={styles.menuItem}>
+                        <Text style={styles.menuItemText}>Feed</Text>
+                    </View>
+                    
+                </View>
+            </TouchableOpacity> */}
 
             <TouchableOpacity
                 onPress={() => navigation.navigate('Analytics')}
@@ -56,7 +56,7 @@ const CustomDrawer = ({ navigation }) => {
             </TouchableOpacity>
 
             <TouchableOpacity
-                onPress={() => navigation.navigate('Exercise')}
+                onPress={() => navigation.navigate('Exercises')}
             >
                 <View style={styles.menu}>
                     <Ionicons name="barbell-outline" size={24} color="#D0312D" />
@@ -82,7 +82,7 @@ const CustomDrawer = ({ navigation }) => {
 
         <View style={styles.signout}>
             <TouchableOpacity
-                onPress={() => console.log('exit')}
+                onPress={() => navigation.navigate('Login')}
             >
                 <View style={styles.menu}>
                     <Ionicons name="exit-outline" size={24} color="#D0312D" />
@@ -114,7 +114,8 @@ const styles = StyleSheet.create({
     menuItemText: {
         fontSize: 15,
         marginTop: 3,
-        marginLeft: 20
+        marginLeft: 20,
+        fontWeight: '300'
     }, 
     signout : {
         bottom: 0, 
