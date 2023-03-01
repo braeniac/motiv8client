@@ -13,7 +13,7 @@ const Header = () => {
                 onPress={() => navigation.openDrawer()}
                 style={styles.container}
             >
-                <Ionicons name="menu-outline" size={28}  />
+                <Ionicons name="menu-outline" size={30}  color="#4c8bf5"/>
             </TouchableOpacity>
             <View style={styles.line} />
         </View>

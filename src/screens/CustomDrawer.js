@@ -11,7 +11,7 @@ const CustomDrawer = ({ navigation }) => {
                 onPress={() => navigation.navigate('Home')}
             >
                 <View style={styles.menu}>
-                    <Ionicons name="menu-outline" size={24} color="#D21401" />
+                    <Ionicons name="menu-outline" size={24} color="#4c8bf5" />
                     <View style={styles.menuItem}>
                         <Text style={styles.menuItemText}>Home</Text>
                     </View>
@@ -23,7 +23,7 @@ const CustomDrawer = ({ navigation }) => {
                 onPress={() => navigation.navigate('Profile')}
             >
                 <View style={styles.menu}>
-                    <Ionicons name="ios-person-circle-outline" size={24} color="#D0312D" />
+                    <Ionicons name="ios-person-circle-outline" size={24} color="#4c8bf5" />
                     <View style={styles.menuItem}>
                         <Text style={styles.menuItemText}>Profile</Text>
                     </View>
@@ -47,7 +47,7 @@ const CustomDrawer = ({ navigation }) => {
                 onPress={() => navigation.navigate('Analytics')}
             >
                 <View style={styles.menu}>
-                    <Ionicons name="ios-analytics-outline" size={24} color="#D0312D" />
+                    <Ionicons name="ios-analytics-outline" size={24} color="#4c8bf5" />
                     <View style={styles.menuItem}>
                         <Text style={styles.menuItemText}>Analytics</Text>
                     </View>
@@ -59,9 +59,9 @@ const CustomDrawer = ({ navigation }) => {
                 onPress={() => navigation.navigate('Exercises')}
             >
                 <View style={styles.menu}>
-                    <Ionicons name="barbell-outline" size={24} color="#D0312D" />
+                    <Ionicons name="barbell-outline" size={24} color="#4c8bf5" />
                     <View style={styles.menuItem}>
-                        <Text style={styles.menuItemText}>Exercise</Text>
+                        <Text style={styles.menuItemText}>Exercises</Text>
                     </View>
                     
                 </View>
@@ -71,7 +71,7 @@ const CustomDrawer = ({ navigation }) => {
                 onPress={() => navigation.navigate('Invite Friends to Motiv8')}
             >
                 <View style={styles.menu}>
-                    <Ionicons name="share-outline" size={24} color="#D0312D" />
+                    <Ionicons name="share-outline" size={24} color="#4c8bf5" />
                     <View style={styles.menuItem}>
                         <Text style={styles.menuItemText}>Invite Friends to Motiv8</Text>
                     </View>
@@ -85,7 +85,7 @@ const CustomDrawer = ({ navigation }) => {
                 onPress={() => navigation.navigate('Login')}
             >
                 <View style={styles.menu}>
-                    <Ionicons name="exit-outline" size={24} color="#D0312D" />
+                    <Ionicons name="exit-outline" size={24} color="#4c8bf5" />
                     <View style={styles.menuItem}>
                         <Text style={styles.menuItemText}>Sign out</Text>
                     </View>  

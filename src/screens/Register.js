@@ -12,6 +12,7 @@ const Register = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+
       <Text style={styles.title}>Sign up</Text>
       
       {/* registration form */}
@@ -53,6 +54,7 @@ const Register = ({ navigation }) => {
 
           <TouchableOpacity
             style={styles.button}
+            onPress={() => navigation.navigate('Home')}
           >
             <Text style={styles.buttonTitle}>continue</Text>
           </TouchableOpacity>
@@ -65,9 +67,11 @@ const Register = ({ navigation }) => {
               <Text style={styles.signupText}>Sign in</Text>
             </TouchableOpacity>
           </View>
+
       </View>
 
       {/* alternative sign in i.e. google/apple sign in */}
+
       <View style={styles.alternative}>
         <Text style={styles.altTitle}>OR, USE ONE OF THE FOLLOWING</Text>    
         <View style={styles.line} />
@@ -77,10 +81,10 @@ const Register = ({ navigation }) => {
               style={styles.item}
               onPress={() => console.log('sign in')}
             >
-              <Ionicons name="ios-logo-apple" size={20} color="#D21401" />
+              <Ionicons name="ios-logo-apple" size={20} color="#000" />
               <Text style={styles.itemText}>Sign up with Apple</Text>
               <View style={styles.arrow}>
-                <Ionicons name="chevron-forward" size={20} color="#D21401" />
+                <Ionicons name="chevron-forward" size={20} color="#000" />
               </View>
             </TouchableOpacity> 
             <View style={styles.line} />
@@ -90,10 +94,10 @@ const Register = ({ navigation }) => {
           style={styles.item}
           onPress={() => console.log('sign in')}
         > 
-          <Ionicons name="ios-logo-google" size={20} color="#D21401" />
+          <Ionicons name="ios-logo-google" size={20} color="#4c8bf5" />
           <Text style={styles.itemText}>Sign up with Google</Text>
           <View style={styles.arrow}>
-            <Ionicons name="chevron-forward" size={20} color="#D21401" />
+            <Ionicons name="chevron-forward" size={20} color="#000" />
           </View> 
         </TouchableOpacity>
         <View style={styles.line} /> 
@@ -144,7 +148,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   signupText: {
-    color: "#D21401"
+    color: "#4c8bf5"
   },
   line: {
     borderBottomWidth: StyleSheet.hairlineWidth,

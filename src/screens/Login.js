@@ -36,14 +36,16 @@ const Login = ({ navigation }) => {
           autoCorrect={false}
           style={styles.input}
         />
-        <TouchableOpacity
+        
+        {/* <TouchableOpacity
           style={styles.forgetPassword}
         >
           <Text style={styles.forgetPasswordText}>Forget password?</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
 
         <TouchableOpacity
           style={styles.button}
+          onPress={() => navigation.navigate('Home')}
         >
           <Text style={styles.buttonTitle}>continue</Text>
         </TouchableOpacity>
@@ -69,10 +71,10 @@ const Login = ({ navigation }) => {
               style={styles.item}
               onPress={() => console.log('sign in')}
             >
-              <Ionicons name="ios-logo-apple" size={20} color="#D21401" />
+              <Ionicons name="ios-logo-apple" size={20} color="#000" />
               <Text style={styles.itemText}>Continue with Apple</Text>
               <View style={styles.arrow}>
-                <Ionicons name="chevron-forward" size={20} color="#D21401" />
+                <Ionicons name="chevron-forward" size={20} color="#000" />
               </View>
             </TouchableOpacity> 
             <View style={styles.line} />
@@ -82,10 +84,10 @@ const Login = ({ navigation }) => {
           style={styles.item}
           onPress={() => console.log('sign in')}
         > 
-          <Ionicons name="ios-logo-google" size={20} color="#D21401" />
+          <Ionicons name="ios-logo-google" size={20} color="#4c8bf5" />
           <Text style={styles.itemText}>Continue with Google</Text>
           <View style={styles.arrow}>
-            <Ionicons name="chevron-forward" size={20} color="#D21401" />
+            <Ionicons name="chevron-forward" size={20} color="#000" />
           </View> 
         </TouchableOpacity>
         <View style={styles.line} /> 
@@ -120,7 +122,7 @@ const styles = StyleSheet.create({
     paddingTop: 10,
   },
   forgetPasswordText: {
-    color: "#D21401"
+    color: "#4c8bf5"
   },
   button: {
     marginVertical: 10, 
@@ -138,7 +140,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   signupText: {
-    color: "#D21401"
+    color: "#4c8bf5"
   },
   line: {
     borderBottomWidth: StyleSheet.hairlineWidth,
