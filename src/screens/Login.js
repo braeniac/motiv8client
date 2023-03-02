@@ -37,11 +37,11 @@ const Login = ({ navigation }) => {
           style={styles.input}
         />
         
-        <TouchableOpacity
+        {/* <TouchableOpacity
           style={styles.forgetPassword}
         >
           <Text style={styles.forgetPasswordText}>Forget password?</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
 
         <TouchableOpacity
           style={styles.button}

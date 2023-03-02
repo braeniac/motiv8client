@@ -2,12 +2,14 @@ import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView, ScrollView, Mod
 import React, { useState, useEffect } from 'react'
 import Ionicons from '@expo/vector-icons/Ionicons';
 
+import Exercise from './Exercise';
+
 const Body = () => {
 
     const [modalVisable, setModalVisible] = useState(false); 
 
     return (
-        <ScrollView style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <ScrollView>
 
             <View>
@@ -24,17 +26,10 @@ const Body = () => {
                 transparent={false}
                 visible={modalVisable}
             >
-                <View>
-
-
-                    
-                </View>
-
+                <Exercise modalVisable={modalVisable} setModalVisible={setModalVisible} />
             </Modal>
-
-
             </ScrollView>
-        </ScrollView>
+        </SafeAreaView>
   )
 }
 
