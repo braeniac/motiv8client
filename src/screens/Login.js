@@ -37,11 +37,11 @@ const Login = ({ navigation }) => {
           style={styles.input}
         />
         
-        {/* <TouchableOpacity
+        <TouchableOpacity
           style={styles.forgetPassword}
         >
           <Text style={styles.forgetPasswordText}>Forget password?</Text>
-        </TouchableOpacity> */}
+        </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.button}
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     paddingTop: 10,
   },
   forgetPasswordText: {
-    color: "#4c8bf5"
+    color: "#E50914"
   },
   button: {
     marginVertical: 10, 
@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   signupText: {
-    color: "#4c8bf5"
+    color: "#E50914"
   },
   line: {
     borderBottomWidth: StyleSheet.hairlineWidth,

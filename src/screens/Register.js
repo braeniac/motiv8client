@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   signupText: {
-    color: "#4c8bf5"
+    color: "#E50914"
   },
   line: {
     borderBottomWidth: StyleSheet.hairlineWidth,

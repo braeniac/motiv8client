@@ -1,9 +1,11 @@
 import { StyleSheet, Text, TouchableOpacity, View, Modal } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { useNavigation } from '@react-navigation/native';
 
 const Footer = () => {
 
+  const navigation = useNavigation();
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
@@ -23,15 +25,12 @@ const Footer = () => {
         <View style={styles.modalView}>
 
           <View style={styles.modalTitle}>
-            
-            <Text style={styles.modalTitleText}>Pick a workout day</Text>
-
-          
+            <Text style={styles.modalTitleText}>Choose your workout day</Text>
             <TouchableOpacity
               onPress={() => setModalVisible(!modalVisible)}
               style={styles.close}
             >
-              <Ionicons name="close-circle-outline" size={28} color="#4c8bf5" />
+              <Ionicons name="close-circle-outline" size={28} color="#E50914" />
             </TouchableOpacity>
           </View>
 
@@ -39,18 +38,30 @@ const Footer = () => {
             <View>
               <TouchableOpacity
                 style={styles.item}
+                onPress={() => {
+                  setModalVisible(!modalVisible)
+                  navigation.navigate('Workout') 
+                }}
               >
                 <Text style={styles.itemText}>PUSH</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
                 style={styles.item}
+                onPress={() => {
+                  setModalVisible(!modalVisible)
+                  navigation.navigate('Workout') 
+                }}
               >
                 <Text style={styles.itemText}>PULL</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
                 style={styles.item}
+                onPress={() => {
+                  setModalVisible(!modalVisible)
+                  navigation.navigate('Workout') 
+                }}
               >
                 <Text style={styles.itemText}>LEG</Text>
               </TouchableOpacity>
@@ -87,7 +98,7 @@ const styles = StyleSheet.create({
       alignItems: 'center'
     },
     text: {
-      color: "#4c8bf5",
+      color: "#E50914",
       fontWeight: '300',
       fontSize: 16
     },
@@ -117,7 +128,8 @@ const styles = StyleSheet.create({
     },
     modalTitleText: {
       fontSize: 16,
-      fontWeight: '300'
+      fontWeight: '300',
+      marginTop: 5
     },
     close: {
       left: 0
@@ -132,6 +144,6 @@ const styles = StyleSheet.create({
     itemText: {
       fontWeight: '200',
       fontSize: 22,
-      marginTop: 5
+      marginTop: 5,
     }
 })

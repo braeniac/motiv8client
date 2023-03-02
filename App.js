@@ -2,6 +2,11 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
+//unprotected routes
+import Login from './src/screens/Login';
+import Register from './src/screens/Register';
+ 
+//protected routes
 import Home from './src/screens/Home'; 
 import Feed from './src/screens/Feed';
 import Profile from './src/screens/Profile'; 
@@ -9,8 +14,7 @@ import Analytics from './src/screens/Analytics';
 import Friends from './src/screens/Friends'; 
 import CustomDrawer from './src/screens/CustomDrawer';
 import Exercises from './src/screens/Exercises';
-import Login from './src/screens/Login';
-import Register from './src/screens/Register'; 
+import Workout from './src/screens/Workout'; 
 
 const Drawer = createDrawerNavigator();
 
@@ -28,6 +32,7 @@ const MyDrawer = () => {
       <Drawer.Screen name="Analytics"                 component={Analytics}   />
       <Drawer.Screen name="Exercises"                 component={Exercises}   />
       <Drawer.Screen name="Invite Friends to Motiv8"  component={Friends}     />
+      <Drawer.Screen name="Workout"                   component={Workout}     />
     </Drawer.Navigator>
   );
 }
