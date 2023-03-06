@@ -2,8 +2,6 @@ import { StyleSheet, Text, View, SafeAreaView, ScrollView } from 'react-native'
 import react, { useState, useEffect } from 'react'
 
 const Main = () => {
-
-    
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView style={styles.scrollView}>

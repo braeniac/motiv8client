@@ -31,7 +31,7 @@ const CustomDrawer = ({ navigation }) => {
                 </View>
             </TouchableOpacity>
 
-            <TouchableOpacity
+            {/* <TouchableOpacity
                 onPress={() => navigation.navigate('Feed')}
             >
                 <View style={styles.menu}>
@@ -41,7 +41,7 @@ const CustomDrawer = ({ navigation }) => {
                     </View>
                     
                 </View>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
 
             <TouchableOpacity
                 onPress={() => navigation.navigate('Analytics')}

@@ -19,8 +19,6 @@ const Exercise = ({ modalVisable, setModalVisible }) => {
             />
         </View>
 
-
-
         <View style={styles.close}>
             <TouchableOpacity
                 onPress={() => setModalVisible(!modalVisable)}
@@ -55,17 +53,17 @@ const styles = StyleSheet.create({
     close: {
         position: 'absolute',
         bottom: 0, 
-        marginBottom: 50,
+        marginBottom: 40,
         alignSelf: 'center'
     },
     closeText: {
         color: "#E50914",
         fontWeight: '300',
-        fontSize: 16
+        fontSize: 20
     }, 
     search: {
         marginTop: 20,
-        elevation: 10
+        elevation: 10,
     }
 
 })
