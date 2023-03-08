@@ -7,6 +7,8 @@ const Footer = () => {
 
   const navigation = useNavigation();
   const [modalVisible, setModalVisible] = useState(false);
+  const [choice, setChoice] = useState(''); 
+
 
   return (
     <View style={styles.container}>
@@ -40,6 +42,7 @@ const Footer = () => {
                 style={styles.item}
                 onPress={() => {
                   setModalVisible(!modalVisible)
+                  setChoice('push')
                   navigation.navigate('Workout') 
                 }}
               >
@@ -50,6 +53,7 @@ const Footer = () => {
                 style={styles.item}
                 onPress={() => {
                   setModalVisible(!modalVisible)
+                  setChoice('pull')
                   navigation.navigate('Workout') 
                 }}
               >
@@ -60,6 +64,7 @@ const Footer = () => {
                 style={styles.item}
                 onPress={() => {
                   setModalVisible(!modalVisible)
+                  setChoice('leg')
                   navigation.navigate('Workout') 
                 }}
               >
@@ -100,7 +105,7 @@ const styles = StyleSheet.create({
     text: {
       color: "#E50914",
       fontWeight: '300',
-      fontSize: 16
+      fontSize: 20
     },
     modalView: {
       backgroundColor: 'white',

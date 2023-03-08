@@ -19,6 +19,10 @@ const Exercise = ({ modalVisable, setModalVisible }) => {
             />
         </View>
 
+        <View>
+            
+        </View>
+
         <View style={styles.close}>
             <TouchableOpacity
                 onPress={() => setModalVisible(!modalVisable)}

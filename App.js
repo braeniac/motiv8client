@@ -1,4 +1,6 @@
 import * as React from 'react';
+
+//navigation setup
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
@@ -37,10 +39,17 @@ const MyDrawer = () => {
   );
 }
 
+
+//redux setup
+import { Provider } from 'react-redux'; 
+import store from './src/redux/store';  
+
 export default function App() {
   return (
-    <NavigationContainer>
-      <MyDrawer />
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <MyDrawer />
+      </NavigationContainer>
+    </Provider>
   );
 }

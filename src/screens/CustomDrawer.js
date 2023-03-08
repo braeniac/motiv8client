@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
         marginLeft: 20
     },
     menuItemText: {
-        fontSize: 15,
+        fontSize: 16,
         marginTop: 3,
         marginLeft: 20,
         fontWeight: '300'
