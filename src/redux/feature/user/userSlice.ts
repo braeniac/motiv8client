@@ -5,6 +5,7 @@ interface UserState {
     firstName: string; 
     lastName: string; 
     email: string;
+    img: string;
     isLoggedIn: boolean;
 }
 
@@ -13,6 +14,7 @@ const initialState : UserState = {
     firstName: '',
     lastName: '',
     email: '',
+    img: '',
     isLoggedIn: false
 }
 

@@ -20,15 +20,13 @@ export default function RootLayout() {
                     screenOptions={{ 
                         headerShown: false,
                         drawerHideStatusBarOnOpen: true,
+                        swipeEnabled: false,
                         drawerStyle: {
                             width: "100%",
                             backgroundColor: '#000', 
                         },
                     }}
                 >
-                    <Drawer.Screen
-                        name="index"
-                    />
                 </Drawer>
             </GestureHandlerRootView>
         </Provider>
