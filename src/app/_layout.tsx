@@ -1,14 +1,16 @@
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+//tailwindcss
 import '../../global.css';
 
+//drawer
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Drawer } from 'expo-router/drawer';
+import { CustomDrawerContent }  from '../components/drawer/CustomDrawerContent';
 
+//redux
 import { StatusBar } from 'expo-status-bar';
 import { Provider } from 'react-redux';
 import { store }  from '../redux/store';
 
-import { CustomDrawerContent }  from '../components/drawer/CustomDrawerContent';
 
 export default function RootLayout() {
     return(

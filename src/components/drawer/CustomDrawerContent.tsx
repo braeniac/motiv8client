@@ -22,14 +22,8 @@ const drawerItems = [
 export const CustomDrawerContent = (props: DrawerContentComponentProps) => {
 
     const router = useRouter();
-
     const { image, pickImage } = useImagePicker(); 
     
-
-
- 
-
-
     return(
         <DrawerContentScrollView {...props}>
             <View className='justify-between flex-row'>
@@ -58,9 +52,8 @@ export const CustomDrawerContent = (props: DrawerContentComponentProps) => {
                                 className='w-36 h-36 rounded-[32px]'
                             />
                         ) :
-
-                        <View className='p-8 items-center justify-center w-36 h-36 rounded-[32px] bg-zinc-900'>
-                            <Text className='text-3xl font-sans font-bold text-zinc-400'>EW</Text>
+                        <View className='items-center justify-center  w-36 h-36 rounded-[32px] bg-zinc-900'>
+                            <Text className='text-3xl font-extrabold text-white'>EW</Text>
                         </View>
                     }  
                 </TouchableOpacity>
