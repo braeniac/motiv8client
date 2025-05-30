@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import {View, Text, TouchableOpacity, Platform, SafeAreaView, StatusBar} from 'react-native'; 
+import {View, Text, TouchableOpacity, Platform, SafeAreaView, StatusBar} from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { DrawerActions, useNavigation } from '@react-navigation/native';
 
@@ -10,7 +10,7 @@ interface headerProps {
 
 export default function Header({ icon, handlePress } : headerProps) {
 
-    const navigation = useNavigation(); 
+    const navigation = useNavigation();
 
     return(
         <SafeAreaView
@@ -20,11 +20,11 @@ export default function Header({ icon, handlePress } : headerProps) {
             }}
         >
             <TouchableOpacity
-                onPress={() => navigation.dispatch(DrawerActions.openDrawer())} 
+                onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
             >
                 <Ionicons name="menu" size={24} color="#A1A1AA" />
             </TouchableOpacity>
-            
+
             <TouchableOpacity
                 onPress={handlePress}
             >
@@ -34,4 +34,3 @@ export default function Header({ icon, handlePress } : headerProps) {
         </SafeAreaView>
     )
 }
-

@@ -6,6 +6,14 @@ module.exports = function (api) {
       'nativewind/babel',
     ],
     plugins: [
+      [
+        'module-resolver',
+        {
+          alias: {
+            '@assets': './assets',
+          },
+        },
+      ],
       'react-native-reanimated/plugin'
     ], // Keep this as the last plugin
   };

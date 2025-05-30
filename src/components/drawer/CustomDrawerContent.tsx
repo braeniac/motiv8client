@@ -1,9 +1,9 @@
-import { useState } from 'react'; 
+import { useState } from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 import { useRouter } from 'expo-router';
-import { 
+import {
     DrawerContentComponentProps,
     DrawerContentScrollView,
 } from '@react-navigation/drawer';
@@ -11,19 +11,19 @@ import {
 import useImagePicker from '../../hooks/useImagePicker';
 
 const drawerItems = [
-    { label: 'Feed',     icon: 'home-outline',      route: '/' },
-    { label: 'Chat',     icon: 'chatbox-outline',   route: '/chat'},
-    { label: 'Workouts', icon: 'barbell-outline',   route: '/workout'},
-    { label: 'Progress', icon: 'analytics-outline', route: '/progress'},
-    { label: 'Profile',  icon: 'person-outline',    route: '/profile'},
-    { label: 'Settings', icon: 'settings-outline',  route: '/setting'}
+    { label: 'feed',      icon: 'home-outline',          route: '/'          },
+    { label: 'chat',      icon: 'chatbubbles-outline',   route: '/chat'      },
+    { label: 'workouts',  icon: 'barbell-outline',       route: '/workout'   },
+    { label: 'progress',  icon: 'podium-outline',        route: '/progress'  },
+    { label: 'profile',   icon: 'person-outline',        route: '/profile'   },
+    { label: 'settings',  icon: 'settings-outline',      route: '/setting'   }
 ];
 
 export const CustomDrawerContent = (props: DrawerContentComponentProps) => {
 
     const router = useRouter();
-    const { image, pickImage } = useImagePicker(); 
-    
+    const { image, pickImage } = useImagePicker();
+
     return(
         <DrawerContentScrollView {...props}>
             <View className='justify-between flex-row'>
@@ -40,26 +40,25 @@ export const CustomDrawerContent = (props: DrawerContentComponentProps) => {
             </View>
             <View className='p-8 items-center'>
                 <View className='justify-center items-center'>
-                <TouchableOpacity 
+                <TouchableOpacity
                     className='mb-2'
                     onPress={pickImage}
-                    
                 >
                     {
                         image ? (
-                            <Image 
+                            <Image
                                 source={{ uri : image }}
                                 className='w-36 h-36 rounded-[32px]'
                             />
                         ) :
                         <View className='items-center justify-center  w-36 h-36 rounded-[32px] bg-zinc-900'>
-                            <Text className='text-3xl font-extrabold text-white'>EW</Text>
+                            <Text className='text-6xl font-sans font-extrabold text-zinc-400'>SS</Text>
                         </View>
-                    }  
+                    }
                 </TouchableOpacity>
-                    <Text className='text-5xl font-sans font-semibold text-zinc-400 mt-6'>Emma</Text>
-                    <Text className='text-5xl font-sans font-semibold text-zinc-400'>Wilson</Text>
-                    <Text className='text-xs font-sans text-zinc-400 p-4'>emma.wilson.live@gmail.com</Text>
+                    <Text className='text-5xl font-sans font-semibold text-white mt-6'>Sydney</Text>
+                    <Text className='text-5xl font-sans font-semibold text-white'>Sweeney</Text>
+                    <Text className='text-xs font-sans text-white p-4'>sydney.sweeney.live@gmail.com</Text>
                 </View>
             </View>
             <View className="flex-row flex-wrap justify-between p-4 space-y-2">
@@ -69,10 +68,10 @@ export const CustomDrawerContent = (props: DrawerContentComponentProps) => {
                             key={index}
                             onPress={() => router.push(item.route)}
                             className="w-[49%] aspect-square bg-zinc-900 rounded-2xl justify-center mb-4"
-                        >   
+                        >
                             <View className='pl-8'>
                                 <Ionicons name={item.icon as any} size={16} color="#A1A1AA" />
-                                <Text className="text-zinc-400 mt-2 font-semibold text-md">{item.label}</Text>
+                                <Text className="text-zinc-400 mt-2 font-sans font-semibold text-md">{item.label}</Text>
                             </View>
                         </TouchableOpacity>
                     ))

@@ -3,7 +3,7 @@ module.exports = {
   // NOTE: Update this to include the paths to all of your component files.
   // content: ["./App.tsx", "./components/**/*.{js,jsx,ts,tsx}"],
    content: [
-    './src/app/**/*.{js,jsx,ts,tsx}', 
+    './src/app/**/*.{js,jsx,ts,tsx}',
     './src/components/**/*.{js,jsx,ts,tsx}'
   ],
   presets: [
@@ -12,15 +12,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        
+
       },
       fontFamily: {
-        sans: ['"Google Sans"', 'sans-serif']
+        sans: ['ProductSans', 'sans-serif'],
       }
     },
   },
   plugins: [],
 }
+
+
 
 
 
